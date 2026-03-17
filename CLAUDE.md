@@ -28,7 +28,7 @@ dist/
 
 Push `dist/l.js` to Cloudflare CDN. The snippet is loaded by publishers via:
 ```html
-<script src="https://cdn.xenarch.bot/l.js" data-site-id="..."></script>
+<script src="https://cdn.xenarch.dev/l.js" data-site-id="..."></script>
 ```
 
 ## Workflow

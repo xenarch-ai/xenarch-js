@@ -6,7 +6,7 @@ describe("getConfig", () => {
 
   beforeEach(() => {
     script = document.createElement("script");
-    script.src = "https://cdn.xenarch.bot/l.js";
+    script.src = "https://cdn.xenarch.dev/l.js";
     document.head.appendChild(script);
   });
 
@@ -25,10 +25,10 @@ describe("getConfig", () => {
     expect(config).toBeNull();
   });
 
-  it("defaults api url to xenarch.bot", () => {
+  it("defaults api url to xenarch.dev", () => {
     script.setAttribute("data-site-id", "st_test");
     const config = getConfig();
-    expect(config?.apiUrl).toBe("https://xenarch.bot/v1");
+    expect(config?.apiUrl).toBe("https://xenarch.dev/v1");
   });
 
   it("reads custom api url", () => {

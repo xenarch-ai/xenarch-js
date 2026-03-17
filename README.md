@@ -9,7 +9,7 @@ A lightweight (<9KB) JavaScript snippet that detects AI agent visitors and prese
 Add to your site:
 
 ```html
-<script src="https://cdn.xenarch.bot/l.js" data-site-id="YOUR_SITE_ID"></script>
+<script src="https://cdn.xenarch.dev/l.js" data-site-id="YOUR_SITE_ID"></script>
 ```
 
 ## Development

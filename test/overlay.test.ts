@@ -9,7 +9,7 @@ const mockGate: GateResponse = {
   collector: "0xabcdefabcdefabcdefabcdefabcdefabcdefabcd",
   network: "base",
   asset: "USDC",
-  verify_url: "https://xenarch.bot/v1/gates/gate_test123/verify",
+  verify_url: "https://xenarch.dev/v1/gates/gate_test123/verify",
   expires: "2026-03-15T08:00:00Z",
 };
 
