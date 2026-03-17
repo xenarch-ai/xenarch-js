@@ -14,7 +14,7 @@ describe("createGate", () => {
       collector: "0xdef",
       network: "base",
       asset: "USDC",
-      verify_url: "https://xenarch.bot/v1/gates/gate_123/verify",
+      verify_url: "https://xenarch.dev/v1/gates/gate_123/verify",
       expires: "2026-03-15T08:00:00Z",
     };
 
@@ -28,12 +28,12 @@ describe("createGate", () => {
     );
 
     const result = await createGate(
-      "https://xenarch.bot/v1",
+      "https://xenarch.dev/v1",
       "st_test",
       "https://example.com/article"
     );
 
-    expect(fetch).toHaveBeenCalledWith("https://xenarch.bot/v1/gates", {
+    expect(fetch).toHaveBeenCalledWith("https://xenarch.dev/v1/gates", {
       method: "POST",
       headers: {
         "X-Site-Token": "st_test",
@@ -60,7 +60,7 @@ describe("createGate", () => {
     );
 
     await expect(
-      createGate("https://xenarch.bot/v1", "st_test", "https://example.com")
+      createGate("https://xenarch.dev/v1", "st_test", "https://example.com")
     ).rejects.toThrow("Gate creation failed: 500");
   });
 
@@ -81,7 +81,7 @@ describe("createGate", () => {
     );
 
     await expect(
-      createGate("https://xenarch.bot/v1", "st_test", "https://example.com")
+      createGate("https://xenarch.dev/v1", "st_test", "https://example.com")
     ).rejects.toThrow('Invalid response: missing or empty "price_usd"');
   });
 });
@@ -107,10 +107,10 @@ describe("checkGateStatus", () => {
       })
     );
 
-    const result = await checkGateStatus("https://xenarch.bot/v1", "gate_123");
+    const result = await checkGateStatus("https://xenarch.dev/v1", "gate_123");
     expect(result.status).toBe("pending");
     expect(fetch).toHaveBeenCalledWith(
-      "https://xenarch.bot/v1/gates/gate_123"
+      "https://xenarch.dev/v1/gates/gate_123"
     );
   });
 });

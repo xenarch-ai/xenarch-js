@@ -26,7 +26,7 @@ export function getConfig(): XenarchConfig | null {
   if (!siteId) return null;
 
   const rawApiUrl =
-    scriptTag.getAttribute("data-api-url") || "https://xenarch.bot/v1";
+    scriptTag.getAttribute("data-api-url") || "https://xenarch.dev/v1";
 
   // Validate API URL protocol
   let apiUrl: string;
